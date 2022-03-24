@@ -60,7 +60,6 @@ for ExpInd=1:4
                 continue;
             end
             tmppool=squeeze(CIndWhite(ic,ir,:));
-            tmppool(length(tmppool)+1)=CInd(ic,ir);
             Mn(ic,ir)=mean(tmppool);
             StdDevi(ic,ir)=std(tmppool);
             Pval(ic,ir)=1-normcdf((CInd(ic,ir)-Mn(ic,ir))/StdDevi(ic,ir));
